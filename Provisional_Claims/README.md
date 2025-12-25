@@ -1,7 +1,7 @@
 # Patent Portfolio - Provisional Claims Validation
 
 **Applicant:** Juan Carlos Paredes  
-**Entity:** Entropy Systems (Micro Entity)  
+**Entity:** (Micro Entity)  
 **Validation Date:** December 24, 2025
 
 ---
