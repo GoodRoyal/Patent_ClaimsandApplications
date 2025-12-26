@@ -1,7 +1,7 @@
 # Patent 3a: Thermodynamic Phase Inference Engine (TPIE)
 
 **Application:** Market Regime Detection via Thermodynamic Curvature  
-**Applicant:** Juan Carlos Paredes / Entropy Systems  
+**Applicant:** Juan Carlos Paredes / Enthropy Systems  
 **Filed:** December 2025
 
 ---
