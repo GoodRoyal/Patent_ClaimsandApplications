@@ -32,12 +32,12 @@ Where:
 
 | ID | Simulation | Claimed | Achieved | Status |
 |----|------------|---------|----------|--------|
-| 3.1 | Regime Detection Accuracy | 89.3% | 95.1% | ✅ PASS |
-| 3.2 | Early Warning Lead Time | 85% | 89.0% | ✅ PASS |
-| 3.3 | Max Drawdown Reduction | 23.7% | 32.8% | ✅ PASS |
-| 3.4 | Sharpe Ratio Improvement | 1.43× | 2.67× | ✅ PASS |
-| 3.5 | Transaction Cost Reduction | 42.7% | 75.3% | ✅ PASS |
-| 3.6 | Annual Excess Return | 12.1% | 14.25% | ✅ PASS |
+| 3.1 | Regime Detection Accuracy | 89.3% | 95.1% |  PASS |
+| 3.2 | Early Warning Lead Time | 85% | 89.0% |  PASS |
+| 3.3 | Max Drawdown Reduction | 23.7% | 32.8% |  PASS |
+| 3.4 | Sharpe Ratio Improvement | 1.43× | 2.67× |  PASS |
+| 3.5 | Transaction Cost Reduction | 42.7% | 75.3% |  PASS |
+| 3.6 | Annual Excess Return | 12.1% | 14.25% |  PASS |
 
 ---
 
