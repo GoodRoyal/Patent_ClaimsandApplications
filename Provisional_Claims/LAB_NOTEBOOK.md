@@ -45,6 +45,71 @@ Each validation run should be appended to this file with:
 
 ---
 
+## Session 002 - December 26, 2025 (Examiner Enhancements)
+
+### Purpose
+Enhanced Patents 1a and 2a with examiner-ready demonstrations following the same pattern as Patents 3a, 4a, and 5a.
+
+### Enhancements Applied
+
+#### Patent 1a: IT-OFNG
+| Enhancement | Description |
+|-------------|-------------|
+| **Dataclasses (35 U.S.C. 112)** | `Choice`, `Substrate`, `Record`, `PerpendicularDivergence`, `TemporalModulation`, `ProjectionOperator`, `UnitOfPropagatedChoice` |
+| **Definition References** | Docstrings reference Definitions 1-24 from provisional |
+| **Trade Secret Notice** | 37 C.F.R. 1.71(d) for threshold parameters |
+| **Numerical Example** | Appendix A worked example (D⊥ computation) |
+| **Examiner Plots** | `d_perp_distribution.png`, `convergence_comparison.png`, `detection_performance.png` |
+
+#### Patent 2a: Substrate Orchestration
+| Enhancement | Description |
+|-------------|-------------|
+| **Dataclasses (35 U.S.C. 112)** | `Substrate`, `ElementalCompatibility`, `PerpendicularDivergenceSubstrate`, `ConfigurationSpace`, `Geodesic`, `Holonomy`, `FactorizationEvent`, `UPCProtocol` |
+| **Definition References** | Docstrings reference Definitions 1.1-1.17 from provisional |
+| **Trade Secret Notice** | 37 C.F.R. 1.71(d) for calibration parameters |
+| **Numerical Example** | Appendix F worked example (Earth-Moon-Sun system) |
+| **Examiner Plots** | `elemental_compatibility.png`, `holonomy_rate.png`, `substrate_classes.png` |
+
+### Validation Results (December 26, 2025)
+
+#### Patent 1a: 9/9 PASS
+```
+Simulation 1a.1: Memory Efficiency      - 98.8% (target: 73%)     ✓ PASS
+Simulation 1a.2: Bandwidth Reduction    - 98.0% (target: 58%)     ✓ PASS
+Simulation 1a.3: Throughput Increase    - 5.81× (target: 2.3×)    ✓ PASS
+Simulation 1a.4: Byzantine TPR          - 100%  (target: 97%)     ✓ PASS [CORNERSTONE]
+Simulation 1a.5: Byzantine FPR          - 0.0%  (target: ≤0.8%)   ✓ PASS
+Simulation 1a.6: Convergence Speed      - 128.8× (target: 2.1×)   ✓ PASS
+Simulation 1a.7: Accuracy (30% Byz)     - 99.8% (target: 93%)     ✓ PASS
+Simulation 1a.8: Detection Speed        - 70%   (target: 55%)     ✓ PASS
+Simulation 1a.9: Audit Integrity        - 100%  (target: 100%)    ✓ PASS
+```
+
+#### Patent 2a: 8/8 PASS
+```
+Simulation 2a.1: Cislunar Capacity      - 30 bits, 100% (target: 30 bits, 99%)  ✓ PASS
+Simulation 2a.2: Elemental ξ            - 0.89/0.11 (target: 0.88/0.11)         ✓ PASS
+Simulation 2a.3: Geodesic Accuracy      - 1.24e-10 (target: <1e-6)              ✓ PASS
+Simulation 2a.4: Factorization Pred     - 100% (target: 90%)                    ✓ PASS
+Simulation 2a.5: Holonomy Rate          - 0.0273 rad/mo (target: 0.027)         ✓ PASS
+Simulation 2a.6: Ionospheric Improv     - 16.9% (target: 15%)                   ✓ PASS
+Simulation 2a.7: Routing Optimization   - 83.1% better (target: optimal)        ✓ PASS
+Simulation 2a.8: UPC Reliability        - 99.98% (target: 99%)                  ✓ PASS
+```
+
+### Generated Plots
+
+| Patent | Plot | Description |
+|--------|------|-------------|
+| 1a | `d_perp_distribution.png` | D⊥ score histogram: honest (green) vs Byzantine (red) |
+| 1a | `convergence_comparison.png` | Model norm over 50 rounds: IT-OFNG vs FedAvg |
+| 1a | `detection_performance.png` | TPR vs Byzantine fraction (10%-40%) |
+| 2a | `elemental_compatibility.png` | 3×3 ξ matrix: Earth-Moon-Sun |
+| 2a | `holonomy_rate.png` | Accumulated holonomy over 12 months |
+| 2a | `substrate_classes.png` | Class A/B/C/D visualization |
+
+---
+
 ## Patent 1a: IT-OFNG (Information-Theoretic Orthogonal Framework)
 
 ### Core Formula
@@ -499,7 +564,7 @@ Sheaf-theoretic fusion with cohomology-based consistency detection.
 
 ## Summary Dashboard
 
-### Current Status (Updated: 2025-12-24)
+### Current Status (Updated: 2025-12-26)
 
 | Patent | Simulations | Passed | Failed | Pending |
 |--------|-------------|--------|--------|---------|
@@ -550,6 +615,8 @@ Sheaf-theoretic fusion with cohomology-based consistency detection.
 | 2025-12-24 | 5a | 5.3 | <10ms | 3.2ms |  PASS |
 | 2025-12-24 | 5a | 5.4 | 83% | 94.1% |  PASS |
 | 2025-12-24 | 5a | 5.5 | 100% | 100.0% |  PASS |
+| 2025-12-26 | 1a | ALL | Enhanced | Examiner-ready | ✓ 9/9 |
+| 2025-12-26 | 2a | ALL | Enhanced | Examiner-ready | ✓ 8/8 |
 
 ---
 
@@ -607,7 +674,11 @@ asyncio.run(run_all())
 
 I certify that the results recorded in this notebook are accurate and reproducible.
 
-**Signed:** /s/Juan Carlos Paredes  
-**Date:** 24 December 2025  
+**Signed:** /s/Juan Carlos Paredes
+**Date:** 26 December 2025
 **Juan Carlos Paredes, Inventor**
 cpt66778811@gmail.com
+
+---
+
+*Lab Notebook Enhanced: December 26, 2025 - Added Session 002 documenting Patents 1a and 2a examiner enhancements*
