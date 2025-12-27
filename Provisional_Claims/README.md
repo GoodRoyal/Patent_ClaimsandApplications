@@ -9,16 +9,16 @@
 
 ## Overview
 
-This repository contains executable validation code for 5 provisional patent applications. All 33 simulations across the portfolio have been independently verified to meet or exceed their claimed metrics.
+This repository contains executable validation code for 5 provisional patent applications. All 34 simulations across the portfolio have been independently verified to meet or exceed their claimed metrics.
 
 | Patent | Title | Simulations | Status |
 |--------|-------|-------------|--------|
 | **1a** | IT-OFNG: Perpendicular Divergence for Federated Systems | 9 | ✅ ALL PASS |
 | **2a** | Substrate Orchestration System | 8 | ✅ ALL PASS |
 | **3a** | Thermodynamic Phase Inference Engine | 6 | ✅ ALL PASS |
-| **4a** | CSOS: Cosmic Substrate Operating System | 5 | ✅ ALL PASS |
+| **4a** | CSOS: Cosmic Substrate Operating System | 6 | ✅ ALL PASS |
 | **5a** | Sheaf Sensor Fusion | 5 | ✅ ALL PASS |
-| **Total** | | **33** | **100% PASS** |
+| **Total** | | **34** | **100% PASS** |
 
 ---
 
@@ -27,7 +27,7 @@ This repository contains executable validation code for 5 provisional patent app
 ### Requirements
 ```bash
 # Python 3.10+ required
-pip install numpy scipy pandas networkx simpy yfinance
+pip install numpy scipy pandas networkx simpy yfinance scikit-learn
 ```
 
 ### Run All Validations
@@ -137,7 +137,7 @@ T = VIX/20                (Temperature Mapping)
 
 ### Patent 4a: CSOS (Cosmic Substrate Operating System)
 
-**Core Innovation:** Geodesic scheduling on configuration manifolds.
+**Core Innovation:** Geodesic scheduling on configuration manifolds with Byzantine detection via holonomy correlation.
 
 **Key Results:**
 | Simulation | Claimed | Achieved |
@@ -146,6 +146,7 @@ T = VIX/20                (Temperature Mapping)
 | Uptime (10% failures) | 99.97% | 100.0% |
 | ABC Bound Satisfaction | 100% | 100.0% |
 | Energy Savings | 25% | 41.3% |
+| Byzantine Detection | ≥95% DR, ≤5% FPR | 100% DR, 1.2% FPR |
 
 ---
 
@@ -187,7 +188,7 @@ Provisional_Claims/
 │   ├── kappa_plot.png           # Curvature visualization
 │   └── vix_regimes_plot.png     # VIX regime detection
 ├── Patent_4a/
-│   ├── patent_4a_real.py        # CSOS implementation (5 sims)
+│   ├── patent_4a_real.py        # CSOS implementation (6 sims)
 │   ├── abc_bound_plot.png       # ABC bound satisfaction
 │   ├── lyapunov_convergence.png # Quantum stability
 │   └── substrate_architecture.png # 7-tuple visualization
@@ -216,4 +217,4 @@ For questions regarding these patent applications, contact the applicant through
 
 ---
 
-*Last Updated: December 26, 2025 (Enhanced for Examiner Review)*
+*Last Updated: December 27, 2025 (Added Simulation 4a.6 - Byzantine Coordination Detection)*

@@ -9,7 +9,7 @@
 
 ```
 Patent_ClaimsandApplications/
-├── Provisional_Claims/     # Executable validation code (33 simulations)
+├── Provisional_Claims/     # Executable validation code (34 simulations)
 │   ├── Patent_1a/          # IT-OFNG Federated Learning
 │   ├── Patent_2a/          # Substrate Orchestration
 │   ├── Patent_3a/          # Thermodynamic Phase Inference
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 python Patent_1a/patent_1a_real.py  # Run Patent 1a (9 simulations)
 python Patent_2a/patent_2a_real.py  # Run Patent 2a (8 simulations)
 python Patent_3a/patent_3a_real.py  # Run Patent 3a (6 simulations)
-python Patent_4a/patent_4a_real.py  # Run Patent 4a (5 simulations)
+python Patent_4a/patent_4a_real.py  # Run Patent 4a (6 simulations)
 python Patent_5a/patent_5a_real.py  # Run Patent 5a (5 simulations)
 ```
 
@@ -42,9 +42,9 @@ python Patent_5a/patent_5a_real.py  # Run Patent 5a (5 simulations)
 | 1a IT-OFNG | 9 | 100% |
 | 2a Substrate | 8 | 100% |
 | 3a TPIE | 6 | 100% |
-| 4a CSOS | 5 | 100% |
+| 4a CSOS | 6 | 100% |
 | 5a Sheaf | 5 | 100% |
-| **Total** | **33** | **100%** |
+| **Total** | **34** | **100%** |
 
 See [Provisional_Claims/README.md](Provisional_Claims/README.md) for detailed results.
 
