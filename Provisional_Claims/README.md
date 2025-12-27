@@ -64,6 +64,8 @@ All implementations have been enhanced with:
 
 | Patent | Plots |
 |--------|-------|
+| 1a | `d_perp_distribution.png`, `convergence_comparison.png`, `detection_performance.png` |
+| 2a | `elemental_compatibility.png`, `holonomy_rate.png`, `substrate_classes.png` |
 | 3a | `entropy_plot.png`, `kappa_plot.png`, `vix_regimes_plot.png` |
 | 4a | `abc_bound_plot.png`, `lyapunov_convergence.png`, `substrate_architecture.png` |
 | 5a | `error_comparison.png`, `graceful_degradation.png`, `stratum_distribution.png` |
@@ -170,9 +172,15 @@ Provisional_Claims/
 ├── requirements.txt             # Python dependencies
 ├── run_all.sh                   # Run all validations
 ├── Patent_1a/
-│   └── patent_1a_real.py        # IT-OFNG implementation (9 sims)
+│   ├── patent_1a_real.py        # IT-OFNG implementation (9 sims)
+│   ├── d_perp_distribution.png  # D⊥ score distribution (honest vs Byzantine)
+│   ├── convergence_comparison.png # Convergence with/without IT-OFNG
+│   └── detection_performance.png  # TPR vs attack strength
 ├── Patent_2a/
-│   └── patent_2a_real.py        # Substrate Orchestration (8 sims)
+│   ├── patent_2a_real.py        # Substrate Orchestration (8 sims)
+│   ├── elemental_compatibility.png # ξ values for Earth-Moon-Sun
+│   ├── holonomy_rate.png        # Holonomy accumulation over time
+│   └── substrate_classes.png    # A/B/C/D substrate classification
 ├── Patent_3a/
 │   ├── patent_3a_real.py        # TPIE implementation (6 sims)
 │   ├── entropy_plot.png         # Entropy visualization
