@@ -28,7 +28,7 @@ Where:
 
 ---
 
-## Validation Results (5 Simulations)
+## Validation Results (6 Simulations)
 
 | ID | Simulation | Claimed | Achieved | Status |
 |----|------------|---------|----------|--------|
@@ -37,13 +37,14 @@ Where:
 | 4.3 | ABC Bound Satisfaction | 100% | 100.0% | ✅ PASS |
 | 4.4 | Energy Savings | 25% | 41.3% | ✅ PASS |
 | 4.5 | Lyapunov Convergence | L*≈0.03 | 0.045 | ✅ PASS |
+| 4.6 | Byzantine Detection | ≥95% DR, ≤5% FPR | 100% DR, 1.2% FPR | ✅ PASS |
 
 ---
 
 ## How to Run
 
 ```bash
-pip install numpy networkx simpy
+pip install numpy networkx simpy scikit-learn
 python patent_4a_real.py
 ```
 
@@ -56,13 +57,15 @@ CSOS achieves dramatic improvements by:
 2. **Data locality optimization** via geodesic distance
 3. **ABC bound reseeding** for guaranteed stability
 4. **Holonomy-aware redundancy** for fault tolerance
+5. **Byzantine detection** via holonomy correlation analysis (Claims 21-30)
 
 ---
 
 ## Files
 
-- `patent_4a_real.py` - Complete implementation with fat-tree topology simulation
+- `patent_4a_real.py` - Complete implementation with fat-tree topology simulation (6 simulations)
+- `REFERENCE_IMPLEMENTATION.md` - Detailed documentation of all patent definitions and numerical examples
 
 ---
 
-*Entropy Systems - December 2025*
+*Entropy Systems - December 2025 (Updated: December 27, 2025)*
