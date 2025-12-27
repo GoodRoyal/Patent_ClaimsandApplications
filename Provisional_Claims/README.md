@@ -194,6 +194,7 @@ Provisional_Claims/
 │   └── substrate_architecture.png # 7-tuple visualization
 └── Patent_5a/
     ├── patent_5a_real.py        # Sheaf Sensor Fusion (5 sims)
+    ├── patent_5a_connection_learning_enhanced.py  # Algorithm 1.3.1 (NEW)
     ├── error_comparison.png     # EKF vs Sheaf RMSE
     ├── graceful_degradation.png # Accuracy vs sensor count
     └── stratum_distribution.png # Stratum pie chart
@@ -217,4 +218,4 @@ For questions regarding these patent applications, contact the applicant through
 
 ---
 
-*Last Updated: December 27, 2025 (Added Simulation 4a.6 - Byzantine Coordination Detection)*
+*Last Updated: December 27, 2025 (Added Patent 5a Enhanced Connection Learning Module - Algorithm 1.3.1)*

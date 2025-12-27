@@ -195,18 +195,68 @@ class ConnectionOperator:
         return measurement * self.scale
 
 
+# =============================================================================
+# Enhanced Connection Learning (Patent Def 1.3 - Algorithm 1.3.1)
+# =============================================================================
+#
+# The enhanced connection learning module implements:
+#   1. SVD-based rotation estimation (Kabsch algorithm)
+#   2. RANSAC outlier rejection for robust calibration
+#   3. Modality-specific calibration (camera-lidar, lidar-radar, etc.)
+#   4. Temporal offset estimation for sensor synchronization
+#
+# See patent_5a_connection_learning_enhanced.py for full implementation.
+# =============================================================================
+
+try:
+    from patent_5a_connection_learning_enhanced import learn_connection_auto
+    _ENHANCED_AVAILABLE = True
+except ImportError:
+    _ENHANCED_AVAILABLE = False
+
+
 def learn_connection(calibration_data: List[Tuple[np.ndarray, np.ndarray]],
-                     source: str, target: str) -> ConnectionOperator:
+                     source: str, target: str,
+                     source_modality: str = "generic",
+                     target_modality: str = "generic") -> ConnectionOperator:
     """
     Learn connection operator from calibration data.
 
     Patent Def 1.3 Algorithm 1.3.1:
-    θ* = argmin_θ Σ_k ||Γ_{i→j}(m_i^(k); θ) - m_j^(k)||²
+        θ* = argmin_θ Σ_k ||Γ_{i→j}(m_i^(k); θ) - m_j^(k)||²
+
+    This function learns the transformation parameters (rotation, translation,
+    scale) that best align measurements from source sensor to target sensor.
+
+    Args:
+        calibration_data: List of (source_measurement, target_measurement) pairs
+        source: Source sensor identifier
+        target: Target sensor identifier
+        source_modality: Sensor modality (e.g., "lidar", "camera", "radar")
+        target_modality: Target sensor modality
+
+    Returns:
+        ConnectionOperator with learned transformation parameters
+
+    Implementation Notes:
+        - If enhanced module available: Uses SVD + RANSAC for robust estimation
+        - Fallback: Uses least-squares translation estimation
     """
     if not calibration_data:
         return ConnectionOperator(source, target)
 
-    # Simple least-squares for translation (rotation assumed identity for simplicity)
+    # Use enhanced auto-learning if available
+    if _ENHANCED_AVAILABLE:
+        return learn_connection_auto(
+            calibration_data=calibration_data,
+            source=source,
+            target=target,
+            source_modality=source_modality,
+            target_modality=target_modality
+        )
+
+    # Fallback: Simple least-squares for translation
+    # (rotation assumed identity - sufficient for reference implementation)
     source_pts = np.array([d[0][:3] for d in calibration_data])
     target_pts = np.array([d[1][:3] for d in calibration_data])
 

@@ -708,3 +708,56 @@ cpt66778811@gmail.com
 *Lab Notebook Enhanced: December 26, 2025 - Added Session 002 documenting Patents 1a and 2a examiner enhancements*
 
 *Lab Notebook Updated: December 27, 2025 - Added Simulation 4a.6 (Byzantine Coordination Detection via Holonomy Correlation) validating Claims 21-30*
+
+---
+
+## Session 003 - December 27, 2025 (Patent 5a Enhancement)
+
+### Purpose
+Added enhanced connection learning module for Patent 5a implementing Algorithm 1.3.1 (robust connection operator learning).
+
+### New Module: `patent_5a_connection_learning_enhanced.py`
+
+| Component | Description |
+|-----------|-------------|
+| **Kabsch Algorithm** | SVD-based optimal rotation estimation for 3D point alignment |
+| **RANSAC Outlier Rejection** | Robust calibration with iterative outlier removal |
+| **Modality Calibrator** | Sensor-specific noise priors (camera, lidar, radar, gps, imu) |
+| **Temporal Offset Estimation** | Cross-correlation for sensor synchronization |
+
+### Core Function: `learn_connection_auto()`
+
+```python
+from patent_5a_connection_learning_enhanced import learn_connection_auto
+
+connection = learn_connection_auto(
+    calibration_data=[(source_pts, target_pts), ...],
+    source="lidar_front",
+    target="camera_front",
+    source_modality="lidar",
+    target_modality="camera",
+    use_ransac=True  # Enables outlier rejection
+)
+```
+
+### Patent Reference
+
+**Definition 1.3 Algorithm 1.3.1:**
+```
+θ* = argmin_θ Σ_k ||Γ_{i→j}(m_i^(k); θ) - m_j^(k)||²
+```
+
+### Integration Verification
+
+| Test | Result |
+|------|--------|
+| Module import | PASS (`_ENHANCED_AVAILABLE = True`) |
+| Connection learning | PASS (SVD + RANSAC active) |
+| Integration with `patent_5a_real.py` | PASS |
+
+### Files Added
+- `Patent_5a/patent_5a_connection_learning_enhanced.py` - 450+ lines implementing Algorithm 1.3.1
+
+---
+
+*Lab Notebook Updated: December 27, 2025 - Added Patent 5a Enhanced Connection Learning Module (Algorithm 1.3.1)*
