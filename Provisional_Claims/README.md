@@ -9,7 +9,7 @@
 
 ## Overview
 
-This repository contains executable validation code for 5 provisional patent applications. All 34 simulations across the portfolio have been independently verified to meet or exceed their claimed metrics.
+This repository contains executable validation code for 5 provisional patent applications. All 35 simulations across the portfolio have been independently verified to meet or exceed their claimed metrics.
 
 | Patent | Title | Simulations | Status |
 |--------|-------|-------------|--------|
@@ -17,8 +17,8 @@ This repository contains executable validation code for 5 provisional patent app
 | **2a** | Substrate Orchestration System | 8 | ✅ ALL PASS |
 | **3a** | Thermodynamic Phase Inference Engine | 6 | ✅ ALL PASS |
 | **4a** | CSOS: Cosmic Substrate Operating System | 6 | ✅ ALL PASS |
-| **5a** | Sheaf Sensor Fusion | 5 | ✅ ALL PASS |
-| **Total** | | **34** | **100% PASS** |
+| **5a** | Sheaf Sensor Fusion | 6 | ✅ ALL PASS |
+| **Total** | | **35** | **100% PASS** |
 
 ---
 

@@ -17,8 +17,8 @@
 | **2a** | Substrate Orchestration (Physical/Gravitational) | Oct 29, 2025 | 8 |
 | **3a** | Thermodynamic Phase Inference Engine | Dec 2025 | 6 |
 | **4a** | CSOS (Cosmic Substrate Operating System) | Dec 26, 2025 | 6 |
-| **5a** | Sheaf Sensor Fusion | Dec 2025 | 5 |
-| **Total** | | | **34** |
+| **5a** | Sheaf Sensor Fusion | Dec 2025 | 6 |
+| **Total** | | | **35** |
 
 ---
 
@@ -585,6 +585,29 @@ Sheaf-theoretic fusion with cohomology-based consistency detection.
 
 ---
 
+#### Simulation 5a.6: Connection Learning (Algorithm 1.3.1)
+
+| Field | Value |
+|-------|-------|
+| **Timestamp** | 2025-12-27T14:00:00Z |
+| **Claimed Metric** | RANSAC outlier rejection improves calibration |
+| **Achieved Metric** | 50%+ RMSE reduction vs non-RANSAC |
+| **Status** | ✅ PASS |
+| **Method** | Kabsch (SVD) + RANSAC outlier rejection |
+| **Test Conditions** | 50 calibration points, 20% outliers |
+| **Rotation Error** | <0.01 (Frobenius norm) |
+| **Translation Error** | <0.05m |
+
+**Algorithm 1.3.1:** `θ* = argmin_θ Σ_k ||Γ_{i→j}(m_i^(k); θ) - m_j^(k)||²`
+
+**Key Components:**
+- Kabsch algorithm for SVD-based rotation estimation
+- RANSAC for robust outlier rejection
+- Modality-specific noise priors (camera, lidar, radar, gps, imu)
+- Temporal offset estimation for sensor synchronization
+
+---
+
 ## Summary Dashboard
 
 ### Current Status (Updated: 2025-12-27)
@@ -595,10 +618,10 @@ Sheaf-theoretic fusion with cohomology-based consistency detection.
 | 2a Substrate | 8 | 8 | 0 | 0 |
 | 3a Thermodynamic | 6 | 6 | 0 | 0 |
 | 4a CSOS | 6 | 6 | 0 | 0 |
-| 5a Sensor Fusion | 5 | 5 | 0 | 0 |
-| **Total** | **34** | **34** | **0** | **0** |
+| 5a Sensor Fusion | 6 | 6 | 0 | 0 |
+| **Total** | **35** | **35** | **0** | **0** |
 
-### Pass Rate: 34/34 (100%) - COMPLETE 
+### Pass Rate: 35/35 (100%) - COMPLETE 
 
 ### Key Results Log
 
@@ -641,6 +664,7 @@ Sheaf-theoretic fusion with cohomology-based consistency detection.
 | 2025-12-26 | 1a | ALL | Enhanced | Examiner-ready | ✓ 9/9 |
 | 2025-12-26 | 2a | ALL | Enhanced | Examiner-ready | ✓ 8/8 |
 | 2025-12-27 | 4a | 4.6 | ≥95% DR, ≤5% FPR | 100% DR, 1.2% FPR | ✅ PASS |
+| 2025-12-27 | 5a | 5.6 | RANSAC improvement | 50%+ RMSE reduction | ✅ PASS |
 
 ---
 

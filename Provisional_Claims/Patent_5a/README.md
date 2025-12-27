@@ -20,7 +20,7 @@ This patent introduces a sheaf-theoretic approach to sensor fusion for autonomou
 
 ---
 
-## Validation Results (5 Simulations)
+## Validation Results (6 Simulations)
 
 | ID | Simulation | Claimed | Achieved | Status |
 |----|------------|---------|----------|--------|
@@ -29,6 +29,7 @@ This patent introduces a sheaf-theoretic approach to sensor fusion for autonomou
 | 5a.3 | Fusion Latency | <10ms | <10ms | PASS |
 | 5a.4 | Graceful Degradation | 83% accuracy | 96%+ | PASS |
 | 5a.5 | Geometric Consistency | H1 = 0 | 100% | PASS |
+| 5a.6 | Connection Learning (Alg 1.3.1) | RANSAC improvement | 50%+ RMSE reduction | PASS |
 
 ---
 

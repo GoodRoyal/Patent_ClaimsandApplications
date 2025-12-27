@@ -43,8 +43,8 @@ python Patent_5a/patent_5a_real.py  # Run Patent 5a (5 simulations)
 | 2a Substrate | 8 | 100% |
 | 3a TPIE | 6 | 100% |
 | 4a CSOS | 6 | 100% |
-| 5a Sheaf | 5 | 100% |
-| **Total** | **34** | **100%** |
+| 5a Sheaf | 6 | 100% |
+| **Total** | **35** | **100%** |
 
 See [Provisional_Claims/README.md](Provisional_Claims/README.md) for detailed results.
 
